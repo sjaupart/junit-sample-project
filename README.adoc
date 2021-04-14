@@ -1,0 +1,40 @@
+= JUnit Sample Project
+
+Ce projet sert de template pour les sujets (TD-TP) sur JUnit.
+L'outil de build utilisé sera https://gradle.org/[Gradle].
+
+== Installation
+
+- Java
+- Git
+
+Gradle n'a pas besoin d'être installé.
+Celui-ci est déjà contenu dans le dépôt via les fichiers `gradlew` et `gradlew.bat`.
+
+Pour récupérer le projet : `git clone https://github.com/sjaupart/junit-sample-project.git`.
+
+== Structure du dépôt
+
+- `src/main/java` et `src/test/java` sont les répertoires contenant respectivement votre de production et votre code de test Java.
+- `gradlew` et `gradlew.bat` correspondent aux scripts permettant l'exécution de commandes Gradle.
+- `gradle/wrapper` contient l'archive JAR utilisé par les scripts Gradle.
+- `settings.gradle` contient les propriétés du projet Gradle.
+- `build.gradle` est un descripteur de projet.
+Il contient généralement toutes les dépendances (comme JUnit) et plugins qui seront utilisés dans le projet.
+- `.gitignore` permet d'ignorer des fichiers et répertoires lors d'un commit.
+
+== Compiler et tester mon code
+
+Pour compiler votre code Java :
+
+[source,sh]
+----
+./gradlew compileJava
+----
+
+Pour exécuter les tests unitaires :
+
+[source,sh]
+----
+./gradlew test
+----
